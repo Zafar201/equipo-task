@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.navbar li:hover{
+   border-radius: 100px !important;
+   background-color: black !important;
+   color: white;
+}
+body{
+    background-color: white !important;
+}
+.tab-actives{
+    border-radius: 50px !important;
+}
+.reverse{
+    flex-direction: row-reverse !important;
+}
+/* mobile screen hero */
+@media (max-width: 1200px) {
+    .main-hero {
+      display: grid;
+    }
+    .widget-card{
+        width: 100%;
+        /* display: grid; */
+    }
+    .main-div{
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 0px !important;
+        height: 50vh;
+    }
+    .main-div h1{
+        font-size: 26px;
+        line-height: 38px;
+    }
+    .navbar-end{
+        width: 50%;
+    }
+    .feature{
+        display: block; 
+         max-width: 92%;
+    }
+    .testimonial{
+        margin-left: 0px !important;
+    }
+    .business-feature h2{
+        font-size: 37px;
+    line-height: 50px;
+    width: 100%;
+    }
+    .faq h1{
+      font-size: 26px;
+      line-height: 47px;
+    }
+    .pos-hero-section{
+      max-height: 80vh;
+     }
+     .subscribe-container {
+      flex-direction: column;
+    }
+  
+ 
+  }
+
+  @media (max-width:530px){
+     .widget-cards{
+        display: grid;
+     }
+     .widget-cards div{
+        margin-left: 0px !important;
+     }
+   
+  }
+
+  @media (max-width:740px) {
+    .feature-card{
+        padding: 8px;
+        margin: 18px;
+     }
+     .feature-card img{
+        width: 100%;
+     }
+     .pricing-section h1{
+        font-size: 30px;
+        line-height: 33px;
+     }
+     .mobile-header{
+        padding: 12px;
+     }
+     .mobile-header h2{
+        font-size: 17px;
+     }
+     .choice{
+        margin-top: -10px;
+     }
+     .price{
+        padding: 4px;
+     }
+     .price p, span{
+        font-size: 12px;
+     }
+     .faq-heading{
+      display: block;
+     }
+     .faq{
+      padding: 36px;
+      max-width: 90%;
+      min-height: fit-content;
+     }
+     .faq-list{
+      display: block;
+     }
+     .faq-list > div:first-child {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      width: 100%;
+
+     }
+     .faq-list > div:nth-child(2) {
+      padding-left: 0px !important;
+      width: 100%;
+     }
+     .faq h1 {
+      font-size: 28px;
+      line-height: 47px;
+      width: 100%;
+      margin-bottom: 20px;
+     }
+     .faq input{
+      width: 100%;
+     }
+     .feature h1{
+      width: 100%;
+      font-size: 40px;
+     }
+     .pos-hero-section{
+      max-height: 64vh;
+     }
+     .footer-div button{
+      position: relative;
+      bottom: -34px;
+     }
+     .subscribe-text, .subscribe-input {
+      width: 100% !important;
+    }
+  
+    .subscribe-button {
+      margin-top: 10px; 
+    }
+    .footer-div input{
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .footer-div h2{
+      width: 100%;
+      font-size: 45px;
+    }
+
+ }
+
+ .collapse-title{
+   color: orange;
+ }
+ .opend{
+   color: orange !important;
+ }
+ .closed{
+   color: black !important;
+ }
+
+
+ /* trsnition */
+ .slide-in {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: #0f0f0f; /* Assuming this was meant to be a valid color */
+   transform-origin: bottom;
+ }
+ 
+ .slide-out {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: #0f0f0f; /* This color matches the slide-in background */
+   transform-origin: top;
+ }
+ 

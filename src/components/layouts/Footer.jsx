@@ -19,7 +19,7 @@ const Footer = () => {
     <div className="container mx-auto px-4">
       <div className="mb-12">
         <h2 className="mb-4 font-[Poppins] text-[3.4rem] font-medium leading-[64px] tracking-[-0.02em] text-left text-white w-[34rem]">
-          Don't Miss This Exclusive Opportunity
+          Dont Miss This Exclusive Opportunity
         </h2>
   
       

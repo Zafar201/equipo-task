@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
-import logo from '../../images/vector.png'
+// import logo from '../../images/vector.png'
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -49,7 +49,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8">
         <div className="flex items-center mb-4 md:mb-0">
         
-            <img src={logo} alt="" />
+            {/* <img src={logo} alt="" /> */}
           <span className="text-xl font-bold ml-2">Coca</span>
         </div>
   

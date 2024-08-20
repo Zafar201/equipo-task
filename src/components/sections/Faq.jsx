@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Search } from 'lucide-react';
-import { faqData } from '../../contants';
+import { categories, faqData } from '../../contants';
 
 const FAQItem = (({ question, answer, isOpen, toggleOpen, index }) => {
   return (
@@ -34,10 +34,14 @@ const Faq = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("general");
 
+
+  // Function to toggle the open state of FAQ items
   const toggleOpen = (index) => {
     setOpenIndex(index === openIndex ? -1 : index);
   };
 
+
+  // Filter FAQs based on search query and active category
   const filteredFAQs = faqData.filter(
     (faq) =>
       (faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -45,7 +49,6 @@ const Faq = () => {
       (activeCategory === "all" || faq.category === activeCategory)
   );
 
-  const categories = ["general", "transactions", "payment", "others"];
 
   return (
     <div className='bg-white mt-[70px] mb-[70px]'>

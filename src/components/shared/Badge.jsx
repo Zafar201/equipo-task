@@ -10,7 +10,6 @@ function Badge({ imgSrc, imgAlt, imgBackgroundColor, divBackgroundColor, textCol
   )
 }
 
-// Defining PropTypes
 Badge.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     imgAlt: PropTypes.string.isRequired,

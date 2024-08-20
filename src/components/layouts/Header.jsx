@@ -95,7 +95,7 @@ export default function Header() {
     </div>
     <div className="navbar-end w-[40%]">
       <a className="bg-white border-2 border-[#FF5C00] px-4 py-2 rounded-full text-[#FF5C00] text-sm cursor-pointer" onClick={user ? handleLogout : googleLogin}
-      >{user ? `signout  ${user.email}` : 'login'}</a>
+      >{user ? `signout  ${user.displayName}` : 'login'}</a>
     </div>
   </div>
   </div>

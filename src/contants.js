@@ -183,3 +183,7 @@ export const featuresList = [
       image:screen, 
   }
 ];
+
+
+
+export const categories = ["general", "transactions", "payment", "others"];

@@ -8,6 +8,7 @@ import POSHeroSection from "../components/sections/POSHeroSection";
 import Brands from "../components/sections/Brands";
 
 function HomePage() {
+
   return (
     <div>
      <ToastContainer />

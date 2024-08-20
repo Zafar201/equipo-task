@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 function PageBanner({title}) {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -6,5 +6,11 @@ function PageBanner({title}) {
   </div>
   )
 }
+
+
+PageBanner.propTypes = {
+  title: PropTypes.string,
+};
+
 
 export default PageBanner

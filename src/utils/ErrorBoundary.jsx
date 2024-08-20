@@ -1,5 +1,6 @@
-import { Component } from 'react';
+import { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+
 
 
 class ErrorBoundary extends Component {
@@ -14,14 +15,30 @@ class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    // You can also log error and info to an error logging service
     console.error(error, info);
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      // render fallback UI when error occuerd
+    
+      return (
+        <Fragment>
+  <div className="min-h-screen flex flex-col items-center justify-center text-red-500 text-lg font-bold">
+    <h1>Something went wrong</h1>
+    <div>
+      <button 
+        onClick={() => window.location.href='/'} 
+        className='bg-orange-500 rounded-[50px] text-white p-4 mt-4'
+      >
+        Refresh
+      </button>
+    </div>
+  </div>
+</Fragment>
+
+
+      )
     }
 
     return this.props.children;
@@ -29,7 +46,7 @@ class ErrorBoundary extends Component {
 }
 
 ErrorBoundary.propTypes = {
-    children: PropTypes.node, // or PropTypes.element if you want to be more specific
+    children: PropTypes.node, 
   };
 
 export default ErrorBoundary;

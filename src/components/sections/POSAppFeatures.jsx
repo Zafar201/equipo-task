@@ -6,24 +6,24 @@ import setting from '../../images/setting.png'
 import security from '../../images/security.png'
 import PropTypes from 'prop-types'
 import useMediaQuery from '../../customeHook/useMediaQuery';
-import React from 'react'
 
-const FeatureItem = React.memo(({ img, title, description }) => (
+// FeatureItem Component
+const FeatureItem = ({ img, title, description }) => (
   <div className="mb-6">
     <img className='bg-[#F8F9FD] p-[7px] rounded-[41px] h-[46px]' src={img} alt={title} />
     <h3 className="text-lg mb-1 font-[Poppins] text-[24px] font-medium leading-[36px] tracking-[-0.01em] text-left text-[#19191C]">{title}</h3>
     <p className="text-[16px] font-normal leading-[18px] tracking-[-0.01em] text-left text-[#4D4E57]">{description}</p>
   </div>
-), {}); 
+);
 
-FeatureItem.displayName = 'FeatureItem'; 
 FeatureItem.propTypes = {
-  img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  img: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
 };
 
-const Testimonial = React.memo(({ content, author, role, bgColor, color, width }) => (
+// Testimonial Component
+const Testimonial = ({ content, author, role, bgColor, color, width }) => (
   <div className={`p-4 rounded-lg mb-4 ${bgColor} ${width}`}>
     <p className={`mb-3 ${color} font-[Poppins] text-[20px] font-medium leading-[28px] text-left p-[2px]`}>{content}</p>
     <div className="flex items-center">
@@ -34,17 +34,17 @@ const Testimonial = React.memo(({ content, author, role, bgColor, color, width }
       </div>
     </div>
   </div>
-), {}); 
+);
 
-Testimonial.displayName = 'Testimonial';
 Testimonial.propTypes = {
-  content: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  role: PropTypes.string.isRequired,
-  bgColor: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
+  content: PropTypes.any,
+  author: PropTypes.string,
+  role: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  width: PropTypes.string,
 };
+
 
 
 const POSAppFeatures = () => {

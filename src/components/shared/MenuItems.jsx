@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-import  { Fragment } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 function MenuItems({ menu, setNavActive, navActive }) {
   return (
     <Fragment>
       {menu.map((nav, i) => (
-        <Link to={nav.path} key={i}>
-          <li onClick={() => setNavActive(nav.path)}
-            className={`${navActive === nav.path ? 'rounded-[100px] bg-[#19191C] text-white' : 'text-[#232124] font-medium text-base leading-6'}`}
-            key={i}
-          >
-            <a>{nav.title}</a>
-          </li>
-        </Link>
+        <li onClick={() => setNavActive(nav.path)}
+          className={`${navActive === nav.path ? 'rounded-[100px] bg-[#19191C] text-white' : 'text-[#232124] font-medium text-base leading-6'}`}
+          key={i}
+        >
+          <Link to={nav.path} key={i}>
+            {nav.title}
+          </Link>
+        </li>
       ))}
     </Fragment>
   );

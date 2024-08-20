@@ -34,10 +34,14 @@ const Faq = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("general");
 
+
+  // Function to toggle the open state of FAQ items
   const toggleOpen = (index) => {
     setOpenIndex(index === openIndex ? -1 : index);
   };
 
+
+  // Filter FAQs based on search query and active category
   const filteredFAQs = faqData.filter(
     (faq) =>
       (faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||

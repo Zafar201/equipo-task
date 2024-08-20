@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .navbar li:hover{
    border-radius: 100px !important;
    background-color: black !important;
@@ -71,6 +72,19 @@ body{
      }
      .widget-cards div{
         margin-left: 0px !important;
+     }
+     .category{
+      display: flex;
+      flex-wrap: wrap;
+     }
+     .pos-hero-section h1{
+      font-size: 21px;
+    line-height: 26px;
+     }
+     .pos-hero-section p{
+      font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
      }
    
   }
@@ -159,6 +173,13 @@ body{
       width: 100%;
       font-size: 45px;
     }
+
+ }
+
+ @media (max-width:400px) {
+  .pos-hero-section{
+    max-height: 84vh;
+   }
 
  }
 

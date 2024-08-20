@@ -37,8 +37,7 @@ export default function Header() {
         }
       }
     } catch (error) {
-      console.error('Error during login:', error);
-      toast.error(`Failed to log in: ${error.message}`, {
+      toast.error(`Failed to login: ${error.message}`, {
         position: "top-center",
       });
     }
@@ -48,9 +47,15 @@ export default function Header() {
   const  handleLogout=async()=> {
     try {
       await auth.signOut();
-      console.log("User logged out successfully!");
+      // console.log("User logged out sucessfully!");
+      toast.success("User logged out sucessfully", {
+        position: "top-center",
+      });
     } catch (error) {
-      console.error("Error logging out:", error.message);
+      toast.error(`Error logging out: ${error.message}`, {
+        position: "top-center",
+      });
+      // console.error error.message);
     }
   }
 

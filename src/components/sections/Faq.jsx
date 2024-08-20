@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Search } from 'lucide-react';
 import { faqData } from '../../contants';
 
-// eslint-disable-next-line react/display-name
-const FAQItem = React.memo(({ question, answer, isOpen, toggleOpen, index }) => {
+const FAQItem = (({ question, answer, isOpen, toggleOpen, index }) => {
   return (
     <div className="collapse collapse-plus bg-base-200 mb-2 bg-transparent border-b border-b-[#E4E4E4] rounded-none">
       <input
@@ -68,7 +67,7 @@ const Faq = () => {
         </div>
         
         <div className="flex mb-8 faq-list">
-          <div className="w-1/4">
+          <div className="w-1/4 category">
             {categories.map((category) => (
               <button
                 key={category}
@@ -104,8 +103,8 @@ const Faq = () => {
 };
 
 Faq.propTypes = {
-  searchQuery: PropTypes.string.isRequired,
-  activeCategory: PropTypes.string.isRequired,
+  searchQuery: PropTypes.string,
+  activeCategory: PropTypes.string,
 };
 
 export default Faq;

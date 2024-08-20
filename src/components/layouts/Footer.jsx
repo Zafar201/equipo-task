@@ -21,31 +21,28 @@ const Footer = () => {
         <h2 className="mb-4 font-[Poppins] text-[3.4rem] font-medium leading-[64px] tracking-[-0.02em] text-left text-white w-[34rem]">
           Dont Miss This Exclusive Opportunity
         </h2>
-  
-      
-  
         <div className="relative mt-4 w-full flex flex-col md:flex-row">
-  <p className="mb-6 font-[Poppins] text-[1.3rem] font-normal text-[#C2C2C2] text-left w-full md:w-[36rem] leading-[24px]">
-    Enter your email address and start connecting with a better business world using our POS products.
-  </p>
-  <div className="flex justify-end w-full md:w-auto">
-    <input
-      type="email"
-      placeholder="Enter your email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      className="w-full bg-gray-800 focus:outline-none max-w-[409px] right-0 absolute p-[23px] rounded-[58px]"
-      required
-    />
-    <button
-    onClick={handleSubmit}
-      type="submit"
-      className="absolute top-1/2 transform -translate-y-1/2 right-2 bg-[#FF5C00] text-white rounded-full px-6 py-2 font-semibold hover:bg-orange-600 transition duration-300"
-    >
-      Subscribe
-    </button>
-  </div>
-</div>
+          <p className="mb-6 font-[Poppins] text-[1.3rem] font-normal text-[#C2C2C2] text-left w-full md:w-[36rem] leading-[24px]">
+            Enter your email address and start connecting with a better business world using our POS products.
+          </p>
+          <div className="flex justify-end w-full md:w-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full bg-gray-800 focus:outline-none max-w-[409px] right-0 absolute p-[23px] rounded-[58px]"
+              required
+            />
+            <button
+            onClick={handleSubmit}
+              type="submit"
+              className="absolute top-1/2 transform -translate-y-1/2 right-2 bg-[#FF5C00] text-white rounded-full px-6 py-2 font-semibold hover:bg-orange-600 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
 
       </div>
   

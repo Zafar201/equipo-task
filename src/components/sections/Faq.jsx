@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Search } from 'lucide-react';
 import { faqData } from '../../contants';
 
-// eslint-disable-next-line react/display-name
 const FAQItem = (({ question, answer, isOpen, toggleOpen, index }) => {
   return (
     <div className="collapse collapse-plus bg-base-200 mb-2 bg-transparent border-b border-b-[#E4E4E4] rounded-none">
